@@ -1,6 +1,6 @@
 // Chave de API e segredo
-const apiKey = 'b406acf7-7a16-420e-be93-9cadfd5cc59c';
-const apiSecret = '65de1f818be32aa7ffa5f666b699382eae58b36d6ea3549c4282a36b52d9f104f2ac877ce763e4f7040cec02dea75896d459645623d7b2deff71ff437c58adebe41dc174413ada1ebcc9183fcd431b1d49ba3ea416f49077d0aaf34839143f2434edb2f79b76b519995b692f77885a65';
+const apiKey = '5e4c9b2f-9b2b-445e-8668-a991c41692d5';
+const apiSecret = '65de1f818be32aa7ffa5f666b699382eae58b36d6ea3549c4282a36b52d9f104f2ac877ce763e4f7040cec02dea75896d459645623d7b2deff71ff437c58adeb49e2d7f521e204b86d16796e52a32773548cef533340d980db3512b5c99e1f5d00ec8e3eeb4ddcf8ec8a148a4b3f7113';
 
 // URL da API
 const apiUrl = 'https://api.astronomyapi.com/v2/signs';
