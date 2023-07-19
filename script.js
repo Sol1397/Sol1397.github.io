@@ -1,6 +1,6 @@
 // Chave de API e segredo
-const apiKey = '1308061d-67d4-45ab-9b88-ec800739e11d';
-const apiSecret = '65de1f818be32aa7ffa5f666b699382eae58b36d6ea3549c4282a36b52d9f104f2ac877ce763e4f7040cec02dea75896d459645623d7b2deff71ff437c58adebb6cb9fb3df9352211095def1bea9ad50361190e411ea42243cae82daa45575fef9482d27d7ac82fb2c9d065b523cfbd5';
+const apiKey = 'b7daeecf-94a8-47b8-93d7-9a1bf9f2192a';
+const apiSecret = '65de1f818be32aa7ffa5f666b699382eae58b36d6ea3549c4282a36b52d9f104f2ac877ce763e4f7040cec02dea75896d459645623d7b2deff71ff437c58adeb84171e00a56c91c017d60801abd65d1baf230f592cf26154623fe67df314b58eb19a12a7d4ec5ad37c8aa04439dd9f69';
 
 // URL da API
 const apiUrl = 'https://api.astronomy.com/planet_position';
