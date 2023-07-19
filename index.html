@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Posição dos Planetas em Relação aos Signos</title>
+    <title>Informações da Lua</title>
 </head>
 <body>
-    <h1>Posição dos Po aos Signos</h1>
-    <div id="planet-data"></div>
+    <h1>Informações da Lua</h1>
+    <div id="moon-info"></div>
 
-    <script src="script.js"></script>
+    <script>
+      // Função para obter as informações da Lua usando a Astronomy API
+      function getMoonInfo() {
+        const apiKey = '5e4c9b2f-9b2b-445e-8668-a991c41692d5';
+        const bodyId = 'moon';
+        const apiUrl = `https://api.astronomyapi.com/v2/bodies/${bodyId}`;
+
+        fetch(apiUrl, {
+          headers: {
+            'Authorization': `Bearer ${apiKey}`
+          }
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Exibir as informações da Lua no elemento HTML
+            const moonInfoElement = document.getElementById('moon-info');
+            const moonInfoHtml = `
+              <p><strong>Nome:</strong> ${data.name}</p>
+              <p><strong>Signo:</strong> ${data.sign ? data.sign : 'Desconhecido'}</p>
+              <p><strong>Fase:</strong> ${data.phase ? data.phase : 'Desconhecida'}</p>
+              <p><strong>Distância (km):</strong> ${data.distance ? data.distance : 'Desconhecida'}</p>
+              <p><strong>Ascensão Reta (RA):</strong> ${data.ra ? data.ra : 'Desconhecida'}</p>
+              <p><strong>Declinação (Dec):</strong> ${data.dec ? data.dec : 'Desconhecida'}</p>
+              <p><strong>Latitude Eclíptica:</strong> ${data.ecl_lat ? data.ecl_lat : 'Desconhecida'}</p>
+              <p><strong>Longitude Eclíptica:</strong> ${data.ecl_lon ? data.ecl_lon : 'Desconhecida'}</p>
+            `;
+            moonInfoElement.innerHTML = moonInfoHtml;
+          })
+          .catch(error => {
+            console.error('Erro ao obter informações da Lua:', error);
+          });
+      }
+
+      // Chamar a função para obter as informações da Lua quando a página carregar
+      document.addEventListener('DOMContentLoaded', getMoonInfo);
+    </script>
 </body>
 </html>
